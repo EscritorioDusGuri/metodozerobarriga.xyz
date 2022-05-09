@@ -1,140 +1,1322 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<title>Questionario...</title>
+
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-225792548-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-225792548-1');
-</script>
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KWF4V3D');
+    </script>
+    <!-- End Google Tag Manager -->
 
+    <!-- Title Page -->
+            <title> Segredos da Reconquista </title>
+    
+    <link rel="shortcut icon" href="img/fav.png" />
 
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="shortcut icon" href="favicon.jpg">
-<style>
-    header {
-      background:"headerbg2.png";
-      background-repeat: no-repeat;
-    }
-    @font-face {
-      font-family: Gotham Rounded;
-      src: url("font.otf") format("opentype");
-    }
-    *, *::before, *::after {
-      box-sizing: border-box;
-      font-family: Gotham Rounded;
-    }
-    body {
-      padding: 0;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 100vw;
-      height: 100vh;
-      background: url("fundo.png");
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-    .container {
-      width: 700px;
-      max-width: 90%;
-    }
-    .black {
-      background-color: black;
-      padding: 10px;
-      text-align: center;
-      border-radius: 20px;
-      box-shadow: 0 0 10px 2px black;
-    }
-    .answer {
-      display: grid;
-      grid-template-columns: repeat(2, auto);
-      gap: 10px;
-    }
-    @media (max-width: 991px) {
-      .answer {
-        display: grid;
-        grid-template-columns: repeat(1, auto);
-        gap: 10px;
-      }
-    }
-    .btn {
-      border-radius: 10px;
-      padding: 5px 10px;
-      font-size: 30px;
-      background-color: #f7ce6a;
-      outline: none;
-      text-decoration: none;
-      color: black;
-    }
-    .black h1 {
-      color: yellow;
-    }
-    .black p {
-      font-size: 18px;
-      color: white;
-    }
-    .hide {
-      display: none;
-    }
-  </style>
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="robots" content="index, follow" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+            <style type="text/css">
+            .delay {
+                display: none;
+            }
+        </style>
+    
 </head>
-<body>
 
-<div class="container">
-<div class="black">
-<div id="primeira">
-<div class="question">
-<h1>Pergunta 1</h1>
-<p>Você realmente quer descobrir esse segredo?</p>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWF4V3D" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <main><div class="bar-city">
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-md-12 text-center">
+                Você e mais algumas mulheres próximas de <span id="city">Erechim</span> foram selecionados para esta oferta.
+            </div>
+        </div>
+    </div>
 </div>
-<div class="answer">
-<button class="btn" onclick="segunda()">SIM</button>
-<button class="btn" onclick="segunda()">NÃO</button>
-</div>
-</div>
-<div id="segunda" class="hide">
-<div class="question">
-<h1>Pergunta 2</h1>
-<p>Você promete não revelar para ninguém?</p>
-</div>
-<div class="answer">
-<button class="btn" onclick="terceira()">SIM</button>
-<button class="btn" onclick="terceira()">NÃO</button>
-</div>
-</div>
-<div id="terceira" class="hide">
-<div class="question">
-<h1>Pergunta 3</h1>
-<p>O vídeo a seguir tem um limite para pouquíssimas pessoas verem ao mesmo tempo... Você pretende ver até o fim?</p>
-</div>
-<div class="answer">
-<button class="btn" onclick="redirect()">SIM</button>
-<button class="btn" onclick="redirect()">NÃO</button>
-</div>
-</div>
-</div>
-<p style="text-align: center; color: white; font-weight: bold;">© 2022 – Todos os direitos reservados. Este site não faz parte nem é endossado pelo Facebook. Facebook é uma marca comercial da Facebook, Inc.</p>
-</div>
-<script>
-    function segunda() {
-      document.getElementById("primeira").classList.add("hide")
-      document.getElementById("segunda").classList.remove("hide")
-    }
-    function terceira() {
-      document.getElementById("segunda").classList.add("hide")
-      document.getElementById("terceira").classList.remove("hide")
-    }
-    function redirect() {
-      location.href = "https://segredinhonatural.com/"
-    }
-  </script>
-</body>
-</html>
+
+<section id="hero-video">
+    <div class="container">
+
+        <!-- Logo -->
+        <div class="row justify-content-md-center logo-row">
+            <div class="col-md-3 text-center">
+                <img src="img/logo.svg" class="img-fluid">
+            </div>
+        </div>
+
+
+        <div class="row justify-content-md-center">
+            <div class="col-md-5 text-center">
+                <h1 class="text-md-left">E se você soubesse apenas <b>6 passos para conquistar seu ex de volta?</b></h1>
+
+                <!-- Button -->
+                <div class="delay">
+                    <div class="btn-ct d-none d-md-block ">
+                        <!--<div class="line first-child"></div>-->
+                        <button data-animation="ripple" data-toggle="modal"
+                    data-target="#modalFormulario">Clique aqui e reviva seu grande amor</button>
+                        <div class="text-right">
+                            <div class="line last-child"></div>
+                        </div>
+                        <p>Vagas limitadas!</p>
+                        <div class="row justify-content-md-center">
+                            <div class="col-3">
+                                <img src="img/bandeiras/american.png" class="icon-bandeiras img-fluid">
+                            </div>
+                            <div class="col-3">
+                                <img src="img/bandeiras/mastercard.png" class="icon-bandeiras img-fluid">
+                            </div>
+                            <div class="col-3">
+                                <img src="img/bandeiras/paypal.png" class="icon-bandeiras img-fluid">
+                            </div>
+                            <div class="col-3">
+                                <img src="img/bandeiras/visa.png" class="icon-bandeiras img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Button -->
+            </div>
+
+            <!-- Video -->
+            <div class="col-md-7">
+                <div style="position:relative">
+                    <!--<div class="quadrado-video"></div>-->
+                    <img src="img/key-video.png" class="key-video">
+                    <!-- <div style="padding:56.25% 0 0 0;position:relative;">
+                        <iframe src="https://player.vimeo.com/video/?autoplay=1&title=0&byline=0&portrait=0" class="iframe-vimeo" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    </div>
+                    <script src="https://player.vimeo.com/api/player.js"></script> -->
+
+                    <div><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><figure style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%; margin-block-end: 0; margin-block-start: 0; margin-inline-start: 0; margin-inline-end: 0;" ><iframe src="https://api.vadoo.tv/iframe_test?id=9pFoZHjI8Mivij9O1EtLz0eNYes7L5Fd" scrolling="no" style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute; overflow:hidden; border-radius: 5px;" allowfullscreen="1" allow="autoplay"></iframe></figure></div></div>
+                </div>
+                <div class="som-line text-center">
+                    <img src="img/som.svg"> Por favor, verifique se seu som está ligado.
+                </div>
+            </div>
+
+
+        </div>
+        <div class="row justify-content-md-center d-md-none delay">
+            <div class="col-md-6 text-center">
+
+                <!-- Button -->
+                <div class="btn-ct" style="display: inline-block !important;">
+                    <!--<div class="line first-child"></div>-->
+                    <button data-animation="ripple" data-toggle="modal"
+                    data-target="#modalFormulario">Clique aqui e reviva seu grande amor</button>
+                    <div class="text-right">
+                        <div class="line last-child"></div>
+                    </div>
+                    <p>Vagas limitadas!</p>
+                    <div class="row justify-content-md-center">
+                        <div class="col-3">
+                            <img src="img/bandeiras/american.png" class="icon-bandeiras img-fluid">
+                        </div>
+                        <div class="col-3">
+                            <img src="img/bandeiras/mastercard.png" class="icon-bandeiras img-fluid">
+                        </div>
+                        <div class="col-3">
+                            <img src="img/bandeiras/paypal.png" class="icon-bandeiras img-fluid">
+                        </div>
+                        <div class="col-3">
+                            <img src="img/bandeiras/visa.png" class="icon-bandeiras img-fluid">
+                        </div>
+                    </div>
+                </div>
+                <!-- /Button -->
+
+            </div>
+        </div>
+
+        <!-- Seta -->
+        <div class="row justify-content-md-center arrow-row delay">
+            <div class="col-md-3 text-center">
+                <img src="img/arrow.svg" class="arrow-down">
+            </div>
+        </div>
+
+    </div>
+</section><section id="sobre" class="delay">
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-md-6">
+                <div class="title-section mb-4">
+                    Uma maneira poderosa de despertar a magia e o amor do <span class="destaque">seu ex</span>, fazendo-o sentir atraído irresistivelmente <span class="destaque">de volta à sua vida para sempre</span>.
+                </div>
+                <p>
+                     Olá, sou Leonardo Pádua e estou muito feliz em poder te contar mais sobre o Segredos da Reconquista. Se você sente que as coisas estão demorando com o homem que você ama... Se ele já está do outro lado da porta... Se o seu coração bate no chão toda vez que você verifica o telefone e vê que ele ainda não respondeu... Então você está no ponto onde nada mais importa, exceto tê-lo de volta... Você está exatamente no lugar certo fazendo a coisa certa...
+                </p>
+                <p>
+                    Porque, enquanto vários dos meus cursos tocam nessa temática, nenhum deles é projetado especificamente para obter o seu homem de volta a todo custo. E o que você está prestes a descobrir aqui pode ser a única chance real de você ter seu homem de volta para sempre.
+                </p>
+            </div>
+            <div class="col-md-4 p-5">
+                <img src="img/img-sobre1.png" class="img-fluid">
+            </div>
+        </div>
+        <div class="row justify-content-md-center">
+            <div class="col-md-4 p-5">
+                <img src="img/img-sobre2.png" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+                <div class="title-section mb-4">
+                    Por que a maioria das mulheres <span class="destaque">falham ao reconquistar</span> seu ex
+                </div>
+                <p>
+                    A mágoa que você pode estar sentindo agora, a dor física em seu peito, o sentimento de uma solidação incontrolável... É miserável e frustante e muito fácil sentir-se desamparada, até mesmo desesperada.
+                </p>
+                <p>
+                    Mas se você sabe que há algo especial sobre esse homem e que você não vai se sentir bem até recuperá-lo, não há tempo a perder.
+                </p>
+                <p>
+                    Muitas mulheres reagem com a sua primeira reação institiva que quase sempre causará mais danos do que benefícios.
+                </p>
+                <p>
+                    Quando você o ama tanto e tudo que você quer é que ele veja a mulher em que se tornou e nas grandes conquistas que tiveram juntos na qual vale a pena ele lutar, é difícil não ter uma reação institiva que só tende a afastá-lo mais ainda.
+                </p>
+                <p>
+                    Mas ele também está em um lugar diferente. E nenhuma quantidade de convites, discursos implorantes ou promissores o fará mudar de ideia. Mesmo que ele saiba que você está coberta de razão.
+                </p>
+                <p>
+                    Porque nenhuma quantidade de lógica e raciocínio vai influenciá-lo agora. Ele tem que sentir que ele precisa estar com você.
+                </p>
+                <p> 
+                    Ele precisa experimentar as emoções corretas e expor as memórias exatas que irão preenchê-lo com uma necessidade ardente de lutar pelo seu relacionamento.
+                </p>
+            </div>
+        </div>
+    </div>
+</section><section id="beneficios" class="delay">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-9">
+                <div class="title-section">
+                    Lute pelo o amor mais intenso de toda sua vida
+                </div>
+                <hr class="my-5">
+                <p>
+                    O que você está prestes a descobrir é um método poderoso para reescrever a história do seu relacionamento, para reforçar o amor e momentos exclusivamente românticos, em vez dos maus momentos. Você pode desencadear as emoções certas e as memórias corretas usando dicas simples e fáceis de psicologia que você aprenderá num piscar de olhos. Esses gatilhos mentais criarão um final feliz com o seu homem que será mais incrível do que quando você se apaixonou pela primeira vez.
+                </p>
+            </div>
+        </div>
+        <div class="row justify-content-md-center mt-5">
+            <div class="col-md-4">
+                <div class="card-beneficios">
+                    <img src="img/beneficios/coracao.png">
+                    <div class="title-card">
+                        Você terá
+                    </div>
+                    <p class="text-card">
+                        as instruições passo a passo sobre exatamente o que você precisa fazer e dizer, a fim de obter o seu homem de volta onde ele pertence - ao seu lado.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card-beneficios">
+                    <img src="img/beneficios/conversa.png">
+                    <div class="title-card">
+                        Você será capaz
+                    </div>
+                    <p class="text-card">
+                        de fazê-lo ver que vocês foram feitos um para o outro... E que o seu amor é o único da vida dele que vale a pena lutar.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card-beneficios">
+                    <img src="img/beneficios/cadeado.png">
+                    <div class="title-card">
+                        Você será capaz
+                    </div>
+                    <p class="text-card">
+                        de fechar a porta para as dores do passado e criar um vínculo à prova de balas com seu homem que é mais forte e íntimo do que qualquer um de vocês já experimentaram
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-md-center mt-5">
+            <div class="col-12 text-center">
+                <p>
+                Mas, mais importante, você descobrirá quanto poder você realmente tem em seu relacionamento para criar o romance épico que você sempre sonhou. Sem truques de curto prazo, sem fumaça e espelhos, sem jogos estressantes e sem mendicância. 
+                </p>
+            </div>
+        </div>
+    </div>
+</section> <section id="modulos" class="text-center delay">
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-md-4">
+            <img src="img/key-modulos.png" class="img-fluid key-modulos">
+                <div class="title-section">
+                    Os segredos que <br>
+                    trarão ele de volta
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+
+                <div class="card-modulos my-3">
+                    <img src="img/modulos/modulo-1.png">
+                    <div class="title-card">
+                        Seu homem de volta
+                    </div>
+                    <p class="text-card">
+                        Como conseguir seu homem de volta no menor tempo possível - Antes de ser  muito tarde - Usando neuociência inovadora, resumida em 6 passos simples que qualquer mulher pode seguir
+                    </p>
+                </div>
+
+                <div class="card-modulos my-3">
+                    <img src="img/modulos/modulo-4.png">
+                    <div class="title-card">
+                        Reacender a magia
+                    </div>
+                    <p class="text-card">
+                        Como reacender a magia do “Palco da Lua de Mel” poderosamente acionando seu instinto de perseguição para lutar pelo seu amor, além de tornar seu vínculo à prova de balas para enfrentar qualquer tempestade usando uma técnica revolucionária para reconquistar o seu relacionamento.
+                    </p>
+                </div>
+
+                <div class="card-modulos my-3">
+                    <img src="img/modulos/modulo-7.png">
+                    <div class="title-card">
+                        Fortalecer o seu amor
+                    </div>
+                    <p class="text-card">
+                        O que os grandes casais fazem para fortalecer seu amor quando grandes questões e argumentos ameaçam seu relacionamento. (Esta é a primeira coisa que leva os casais ao seu 20º aniversário e além)
+                    </p>
+                </div>
+
+            </div>
+            <div class="col-md-4">
+                
+                <div class="card-modulos my-3">
+                    <img src="img/modulos/modulo-2.png">
+                    <div class="title-card">
+                        Relembrar os bons momentos
+                    </div>
+                    <p class="text-card">
+                        A verdade por trás do que deu errado - por que ele endureceu por dentro, o que começou aqueles longos silêncios, aqueles olhares sujos, o ressentimento, os olhos errantes ... E como, em poucos dias, você pode embaralhar essas memórias e sentimentos nos confins da sua mente quando ele pensar em você. Você desenvolverá uma técnica que irá fazer com que ele relembre bons momentos e os sentimentos próximos de amor.
+                    </p>
+                </div>
+
+                <div class="card-modulos my-3">
+                    <img src="img/modulos/modulo-5.png">
+                    <div class="title-card">
+                        Como você deve agir
+                    </div>
+                    <p class="text-card">
+                        Como você deve agir se ele está completamente cortando contato com você. Essa tática é a maneira mais certa de obter a sua plena atenção quando as coisas ficaram muito ruins ...
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card-modulos my-3">
+                    <img src="img/modulos/modulo-3.png">
+                    <div class="title-card">
+                        A semente da saúde
+                    </div>
+                    <p class="text-card">
+                        Como plantar uma semente de saudade em sua mente que faz ele sentir falta do seu sorriso, seu toque, seu cheiro ... não importa quão ruim as coisas aconteceram (essa coisa fará com que ele sinta um buraco em sua vida que só você pode preencher e ele não conseguirá tirar você da cabeça dele)
+                    </p>
+                </div>
+                <div class="card-modulos my-3">
+                    <img src="img/modulos/modulo-6.png">
+                    <div class="title-card">
+                        Fechar a porta do passado
+                    </div>
+                    <p class="text-card">
+                        Como fechar a porta do passado para que velhas feridas e discussões não voltem para te assombrar ...
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><section id="oferta" class="delay">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-md-5 text-center">
+
+                <img src="img/img-sobre1.png" style="max-width:240px">
+
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <div class="card-valor my-5">
+                            <b>Investimento único</b><br> de <b>APENAS</b> 10x de
+                            <div class="card-valor-destaque">
+                                R$ 19,70
+                            </div>
+                            ou <span class="destaque">R$197</span> à vista
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text-start">
+                    <b>É um valor incrível para este curso de relacionamento abrangente.</b> E um preço muito pequeno a pagar para trazer o seu homem de volta aos seus braços, onde ele pertence.
+                    E você pode experimentá-lo completamente livre de riscos. Tal como acontece com todos os meus cursos, <b>você tem 15 dias de garantia e a devolução do seu dinheiro</b>. Apenas tente este método por si mesma. Veja como isso desperta emoções e lembranças em seu homem que o deixarão repleto de nova paixão e compromisso.
+                </p>
+                <p class="text-start">
+                    Se você não estiver feliz com a forma como esse curso transforma seu relacionamento por qualquer motivo, terei prazer em lhe devolver cada centavo, sem complicações. Acredito no meu trabalho e estou confiante de que vocês dois passarão por tudo isso. Mas peço-lhe para agir rápido ...
+                    Porque a janela para fazer as coisas direito não vai ficar aberta por muito tempo. Todos os dias ele está separado de você, a lacuna fica maior. Então, por favor, não espere até que seja tarde demais.
+                </p>
+
+            </div>
+            <div class="col-md-5 ">
+                <img src="img/foto-oferta.png" class="img-fluid mb-5">
+                <img src="img/sua-vez.png" class="img-fluid mb-5">
+                <p>
+                    <b>Imagine como será tê-lo respondendo rápido e excitadamente as suas mensagens e ligando novamente ... </b>para que ele faça planos com você de novo ... para ver o rosto dele iluminar quando você entrar pela porta ... para voltar para os braços dele.
+                </p>
+                <p>
+                    Imagine como é bom se ele sussurra que tudo vai ficar bem ... que vocês dois farão tudo isso juntos... que ele quer manter você para sempre.
+                    Este é um dos métodos mais poderosos e bem sucedidos que existem para conseguir seu homem de volta, porque ele realmente conserta o que está quebrado e reacende a verdadeira paixão e conexão.
+                </p>
+                <p>
+                    Este é um dos métodos mais poderosos e bem sucedidos que existem para conseguir seu homem de volta, porque ele realmente conserta o que está quebrado e reacende a verdadeira paixão e conexão.
+                </p>
+                <p>
+                    <b>
+                        Não há jogos, viagens de culpa ou truques sorrateiros para arrastá-lo de volta apenas para ter os mesmos problemas que ameaçam seu amor novamente.
+                    </b>
+                </p>
+                <p>
+                    Então, se você quiser parar de imaginar seu final feliz e começar realmente a experimentar o amor dele, a reconciliação e seu novo relacionamento ...
+                    se você quer sentir aquele alívio emocional, aquela sobrecarga de alegria quando ele volta correndo ...
+                    para realmente segurá-lo em seus braços novamente e saber que as coisas vão ficar bem ... na verdade melhor do que nunca ...
+                </p>
+                <p>
+                    <b>Segredos da Reconquista é especificamente para você.</b>
+                </p>
+                <p>
+                    Não há mais nada lá fora assim. Nenhum outro conselho ou curso de relacionamento o trará de volta para você assim, da maneira genuína como você merece. É considere o que muitas mulheres pagaram em dinheiro e tempo para obter esse mesmo método em sessões particulares de coaching.
+                </p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-5 text-center">
+                <div class="btn-ct">
+                    <div class="line first-child"></div>
+                    <button style="width:100%" data-animation="ripple" data-toggle="modal"
+                    data-target="#modalFormulario">Clique aqui e reviva seu grande amor</button>
+                    <div class="text-right">
+                        <div class="line last-child"></div>
+                    </div>
+                    <p>Vagas limitadas!</p>
+                    <div class="row justify-content-md-center">
+                        <div class="col-3">
+                            <img src="img/bandeiras/american.png" class="icon-bandeiras img-fluid">
+                        </div>
+                        <div class="col-3">
+                            <img src="img/bandeiras/mastercard.png" class="icon-bandeiras img-fluid">
+                        </div>
+                        <div class="col-3">
+                            <img src="img/bandeiras/paypal.png" class="icon-bandeiras img-fluid">
+                        </div>
+                        <div class="col-3">
+                            <img src="img/bandeiras/visa.png" class="icon-bandeiras img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section><section id="comments-facebook" class="delay">
+    <div class="container">
+        <!-- Header -->
+        <div class="row fb header">
+            <div class="col">
+                <b> 24 Comentários </b>
+                <hr>
+            </div>
+        </div>
+
+        <!-- Body -->
+        <div class="ct-cmt">
+
+            <!-- User 1 -->
+            <div class="cmt-user">
+                <div class="cmt-img">
+                    <img src="img/comments-facebook/1.jpg" class="cmt-fb-img">
+                </div>
+                <div class="cmt-fb">
+                    <div class="cmt-fb-name">
+                        Luciana disse
+                    </div>
+                    <div class="cmt-fb-comment">
+                        Feliiiz demais!!! Obrigada Leonardo, achava que o Guia n ia funcionar pq já tinha feito de td pro meu namorado voltar, mas msmo assim quis tentar e olha agora parece que é nosso primeiro mês de namoro todo dia 😍😍😍
+                    </div>
+                    <div class="cmt-fb-status">
+                        <img src="img/like.png">
+                        <span class="cmt-fb-numlike"> Curtir </span> •
+                        <span class="cmt-fb-time"> 3 min </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- User 2 -->
+            <div class="cmt-user">
+                <div class="cmt-img">
+                    <img src="img/comments-facebook/2.jpg" class="cmt-fb-img">
+                </div>
+                <div class="cmt-fb">
+                    <div class="cmt-fb-name">
+                        Larissa disse
+                    </div>
+                    <div class="cmt-fb-comment">
+                        Tava com muito medo dele não voltar. Quanto mais eu estudava o guia mais desencorajada ficava... mas qnd pus em pratica tudo que estava la.... fiquei boobaaaaaa!!! agora estamos vivendo um sonho!! 🙂
+                    </div>
+                    <div class="cmt-fb-status">
+                        <img src="img/like.png">
+                        <span class="cmt-fb-numlike"> Curtir </span> •
+                        <span class="cmt-fb-time"> 4 min </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- User 3 -->
+            <div class="cmt-user">
+                <div class="cmt-img">
+                    <img src="img/comments-facebook/3.jpg" class="cmt-fb-img">
+                </div>
+                <div class="cmt-fb">
+                    <div class="cmt-fb-name">
+                        Neusa disse
+                    </div>
+                    <div class="cmt-fb-comment">
+                        Tô de cara com esse guia! N sabia que realmente ia funcionar, tô naqueles dias de aparecer e sumir de vez em quando que vc flou e adivinha ele me ligou e olha que nem tava atendeno mais minhas ligações!!!
+                    </div>
+                    <div class="cmt-fb-status">
+                        <img src="img/like.png">
+                        <span class="cmt-fb-numlike"> Curtir </span> •
+                        <span class="cmt-fb-time"> 5 min </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- User 4 -->
+            <div class="cmt-user">
+                <div class="cmt-img">
+                    <img src="img/comments-facebook/4.jpg" class="cmt-fb-img">
+                </div>
+                <div class="cmt-fb">
+                    <div class="cmt-fb-name">
+                        Danielli disse
+                    </div>
+                    <div class="cmt-fb-comment">
+                        Eu realmente precisava desse guia, achei o botão pra fazer funcionar o amor de novo 😀 ele já estava com outra e eu achei que n ia ter mais jeito, mas deu certo!!! Estamos de casamento marcado!
+                    </div>
+                    <div class="cmt-fb-status">
+                        <img src="img/like.png">
+                        <span class="cmt-fb-numlike"> Curtir </span> •
+                        <span class="cmt-fb-time"> 12 min </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- User 5 -->
+            <div class="cmt-user">
+                <div class="cmt-img">
+                    <img src="img/comments-facebook/5.jpg" class="cmt-fb-img">
+                </div>
+                <div class="cmt-fb">
+                    <div class="cmt-fb-name">
+                        Juliana disse
+                    </div>
+                    <div class="cmt-fb-comment">
+                        Leonardo você devia vender esse guia mais carooo ele funciona mesmo! Eu já tinha feito tudo que podia e já tava bloqueada no facebook dele, agora estamos de novo juntos e felizes! Vou seguir os passos e nunca mais vamos nos separar 😀
+                    </div>
+                    <div class="cmt-fb-status">
+                        <img src="img/like.png">
+                        <span class="cmt-fb-numlike"> Curtir </span> •
+                        <span class="cmt-fb-time"> 19 min </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- User 6 -->
+            <div class="cmt-user">
+                <div class="cmt-img">
+                    <img src="img/comments-facebook/6.jpg" class="cmt-fb-img">
+                </div>
+                <div class="cmt-fb">
+                    <div class="cmt-fb-name">
+                        Camila Silva disse
+                    </div>
+                    <div class="cmt-fb-comment">
+                        Minha vida agora ao lado do Sergio é outra!!! Obrigada pelo guia Leonardo… Deus te abençoe.
+                    </div>
+                    <div class="cmt-fb-status">
+                        <img src="img/like.png">
+                        <span class="cmt-fb-numlike"> Curtir </span> •
+                        <span class="cmt-fb-time"> 24 min </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- User 7 -->
+            <div class="cmt-user">
+                <div class="cmt-img">
+                    <img src="img/comments-facebook/7.jpg" class="cmt-fb-img">
+                </div>
+                <div class="cmt-fb">
+                    <div class="cmt-fb-name">
+                        Cristiane disse
+                    </div>
+                    <div class="cmt-fb-comment">
+                        Já fazia dois anos que agente n estava mais junto e ele nem queria falar comigo… mas agora tudo passou começamos de novo nossa vida juntos 🙂 brigado pelo guia é perfeito!
+                    </div>
+                    <div class="cmt-fb-status">
+                        <img src="img/like.png">
+                        <span class="cmt-fb-numlike"> Curtir </span> •
+                        <span class="cmt-fb-time"> 26 min </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- User 8 -->
+            <div class="cmt-user last-cmt">
+                <div class="cmt-img">
+                    <img src="img/comments-facebook/8.jpg" class="cmt-fb-img">
+                </div>
+                <div class="cmt-fb">
+                    <div class="cmt-fb-name">
+                        Maria Carolina disse
+                    </div>
+                    <div class="cmt-fb-comment">
+                        Meu marido separou de mim já faz 6 meses será que funciona?
+                    </div>
+                    <div class="cmt-fb-status">
+                        <img src="img/like.png">
+                        <span class="cmt-fb-numlike"> Curtir </span> •
+                        <span class="cmt-fb-time"> 31 min </span>
+                    </div>
+
+                    <!-- Resposta -->
+                    <div class="cmt-resposta first-resposta">
+                        <div class="cmt-img">
+                            <img src="img/comments-facebook/9.jpg" class="cmt-fb-img">
+                        </div>
+                        <div class="cmt-fb">
+                            <div class="cmt-fb-name">
+                                Daniela disse
+                            </div>
+                            <div class="cmt-fb-comment">
+                                Maria eu já estava separada fazia quase dois anos e tava pensano em desistir. O guia foi minha última tentativa que deu certo demais. Pode testar vc vai ver como funciona.
+                            </div>
+                            <div class="cmt-fb-status">
+                                <span class="cmt-fb-numlike"> Curtir </span> •
+                                <span class="cmt-fb-time"> 3 min </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim Resposta -->
+                    <!-- Resposta -->
+                    <div class="cmt-resposta">
+                        <div class="cmt-img">
+                            <img src="img/comments-facebook/10.jpg" class="cmt-fb-img">
+                        </div>
+                        <div class="cmt-fb">
+                            <div class="cmt-fb-name">
+                                Janice disse
+                            </div>
+                            <div class="cmt-fb-comment">
+                                Maria eu n era casada mas morava junto com ele e brigamos muito até terminar. depois que li o guia descobri o que fazer e hoje estamos juntos de novo já faz 2 anos.
+                            </div>
+                            <div class="cmt-fb-status">
+                                <span class="cmt-fb-numlike"> Curtir </span> •
+                                <span class="cmt-fb-time"> 3 min </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim Resposta -->
+                    <!-- Resposta -->
+                    <div class="cmt-resposta">
+                        <div class="cmt-img">
+                            <img src="img/comments-facebook/8.jpg" class="cmt-fb-img">
+                        </div>
+                        <div class="cmt-fb">
+                            <div class="cmt-fb-name">
+                                Maria Carolina disse
+                            </div>
+                            <div class="cmt-fb-comment">
+                                Brigada meninas, vou tentar 🙂
+                            </div>
+                            <div class="cmt-fb-status">
+                                <span class="cmt-fb-numlike"> Curtir </span> •
+                                <span class="cmt-fb-time"> 4 min </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim Resposta -->
+                </div>
+            </div>
+
+
+            <!-- User 11 -->
+            <div class="cmt-user">
+                <div class="cmt-img">
+                    <img src="img/comments-facebook/11.jpg" class="cmt-fb-img">
+                </div>
+                <div class="cmt-fb">
+                    <div class="cmt-fb-name">
+                        Helena disse
+                    </div>
+                    <div class="cmt-fb-comment">
+                        Meu ex até mudou de cidade para me evitar e adivinha? Estou arrumando as malas pra ficar com ele pq ele quase ficou de joelhos insistindo por isso!!! Amando!!! Obrigada pelo Guia 😀
+                    </div>
+                    <div class="cmt-fb-status">
+                        <img src="img/like.png">
+                        <span class="cmt-fb-numlike"> Curtir </span> •
+                        <span class="cmt-fb-time"> 39 min </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- User 12 -->
+            <div class="cmt-user">
+                <div class="cmt-img">
+                    <img src="img/comments-facebook/12.jpg" class="cmt-fb-img">
+                </div>
+                <div class="cmt-fb">
+                    <div class="cmt-fb-name">
+                        Michele disse
+                    </div>
+                    <div class="cmt-fb-comment">
+                        Gente eu achava que era mentira, mas tudo dando certo…. eu me sentia muito pra baixo, mal amada. Cheguei ao ponto de ir numa consulta grátis de psicologa na minha universidade... Por anos eu fiquei sem ninguém, não conseguia chamar a atenção de nenhuma pessoa que me interessava... Com esse guia, consegui o impossível! Eu não to acreditando.
+                    </div>
+                    <div class="cmt-fb-status">
+                        <img src="img/like.png">
+                        <span class="cmt-fb-numlike"> Curtir </span> •
+                        <span class="cmt-fb-time"> 53 min </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- User 13 -->
+            <div class="cmt-user">
+                <div class="cmt-img">
+                    <img src="img/comments-facebook/13.jpg" class="cmt-fb-img">
+                </div>
+                <div class="cmt-fb">
+                    <div class="cmt-fb-name">
+                        Juliana disse
+                    </div>
+                    <div class="cmt-fb-comment">
+                        Pra mim essa história de trazer o amor de volta sempre foi papo furado, mais nosssa… se soubesse disso antes a gente nem tinha terminado!
+                    </div>
+                    <div class="cmt-fb-status">
+                        <img src="img/like.png">
+                        <span class="cmt-fb-numlike"> Curtir </span> •
+                        <span class="cmt-fb-time"> 55 min </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- User 14 -->
+            <div class="cmt-user">
+                <div class="cmt-img">
+                    <img src="img/comments-facebook/14.jpg" class="cmt-fb-img">
+                </div>
+                <div class="cmt-fb">
+                    <div class="cmt-fb-name">
+                        Catarina disse
+                    </div>
+                    <div class="cmt-fb-comment">
+                        Pagaria até um milhããão por esse guia se soubesse que ia ficar tão feliz assim com meu namorado!!!
+                    </div>
+                    <div class="cmt-fb-status">
+                        <img src="img/like.png">
+                        <span class="cmt-fb-numlike"> Curtir </span> •
+                        <span class="cmt-fb-time"> 58 min </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- User 15 -->
+            <div class="cmt-user last-cmt">
+                <div class="cmt-img">
+                    <img src="img/comments-facebook/15.jpg" class="cmt-fb-img">
+                </div>
+                <div class="cmt-fb">
+                    <div class="cmt-fb-name">
+                        Jéssika disse
+                    </div>
+                    <div class="cmt-fb-comment">
+                        Gente eu tenho medo de gastar dinheiro e não dar certo 🙁
+                    </div>
+                    <div class="cmt-fb-status">
+                        <img src="img/like.png">
+                        <span class="cmt-fb-numlike"> Curtir </span> •
+                        <span class="cmt-fb-time"> 1 h </span>
+                    </div>
+
+                    <!-- Resposta -->
+                    <div class="cmt-resposta first-resposta">
+                        <div class="cmt-img">
+                            <img src="img/comments-facebook/16.jpg" class="cmt-fb-img">
+                        </div>
+                        <div class="cmt-fb">
+                            <div class="cmt-fb-name">
+                                Giovanna disse
+                            </div>
+                            <div class="cmt-fb-comment">
+                                Eu pensava a mesma coisa, mas compraria 10 vezes depois que vi que funciona 🙂 Bora ser feliz flor! A gente merece depois que luta tanto
+                            </div>
+                            <div class="cmt-fb-status">
+                                <span class="cmt-fb-numlike"> Curtir </span> •
+                                <span class="cmt-fb-time"> 1 h </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim Resposta -->
+                    <!-- Resposta -->
+                    <div class="cmt-resposta">
+                        <div class="cmt-img">
+                            <img src="img/comments-facebook/17.jpg" class="cmt-fb-img">
+                        </div>
+                        <div class="cmt-fb">
+                            <div class="cmt-fb-name">
+                                Bruna disse
+                            </div>
+                            <div class="cmt-fb-comment">
+                                Funciona sim flor! Pode acreditar. Meu ex nem falava comigo e tinha me bloquiado no zap… agora quem fica no meu pé é ele.
+                            </div>
+                            <div class="cmt-fb-status">
+                                <span class="cmt-fb-numlike"> Curtir </span> •
+                                <span class="cmt-fb-time"> 3 min </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim Resposta -->
+                </div>
+            </div>
+
+            <!-- User 18 -->
+            <div class="cmt-user">
+                <div class="cmt-img">
+                    <img src="img/comments-facebook/18.jpg" class="cmt-fb-img">
+                </div>
+                <div class="cmt-fb">
+                    <div class="cmt-fb-name">
+                        Claudia disse
+                    </div>
+                    <div class="cmt-fb-comment">
+                        A vida da minha família agora é outra!!! Brigada 🙂
+                    </div>
+                    <div class="cmt-fb-status">
+                        <img src="img/like.png">
+                        <span class="cmt-fb-numlike"> Curtir </span> •
+                        <span class="cmt-fb-time"> 1 h </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- User 19 -->
+            <div class="cmt-user">
+                <div class="cmt-img">
+                    <img src="img/comments-facebook/19.jpg" class="cmt-fb-img">
+                </div>
+                <div class="cmt-fb">
+                    <div class="cmt-fb-name">
+                        Adriana disse
+                    </div>
+                    <div class="cmt-fb-comment">
+                        Leonardo vc ta vendendo muito barato! @joycelima esse aqui que te falei que funcionou pra mim. Pode comprar!
+                    </div>
+                    <div class="cmt-fb-status">
+                        <img src="img/like.png">
+                        <span class="cmt-fb-numlike"> Curtir </span> •
+                        <span class="cmt-fb-time"> 1 h </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- User 20 -->
+            <div class="cmt-user">
+                <div class="cmt-img">
+                    <img src="img/comments-facebook/20.jpg" class="cmt-fb-img">
+                </div>
+                <div class="cmt-fb">
+                    <div class="cmt-fb-name">
+                        Aline disse
+                    </div>
+                    <div class="cmt-fb-comment">
+                        Acabei de receber a ligação do boyyyy!!!! Ahhhh não acredito ta funcionando!!!
+                    </div>
+                    <div class="cmt-fb-status">
+                        <img src="img/like.png">
+                        <span class="cmt-fb-numlike"> Curtir </span> •
+                        <span class="cmt-fb-time"> 2 h </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- User 21 -->
+            <div class="cmt-user last-cmt">
+                <div class="cmt-img">
+                    <img src="img/comments-facebook/21.jpg" class="cmt-fb-img">
+                </div>
+                <div class="cmt-fb">
+                    <div class="cmt-fb-name">
+                        Stefanny disse
+                    </div>
+                    <div class="cmt-fb-comment">
+                        Comprei o guia e está funcionando!!! Vamos sair amanhã 😉 vou colocar as outras lições em prática 😀
+                    </div>
+                    <div class="cmt-fb-status">
+                        <img src="img/like.png">
+                        <span class="cmt-fb-numlike"> Curtir </span> •
+                        <span class="cmt-fb-time"> 2 h </span>
+                    </div>
+
+                    <!-- Resposta -->
+                    <div class="cmt-resposta first-resposta">
+                        <div class="cmt-img">
+                            <img src="img/comments-facebook/22.jpg" class="cmt-fb-img">
+                        </div>
+                        <div class="cmt-fb">
+                            <div class="cmt-fb-name">
+                                Gisele disse
+                            </div>
+                            <div class="cmt-fb-comment">
+                                Funciona msmo?
+                            </div>
+                            <div class="cmt-fb-status">
+                                <span class="cmt-fb-numlike"> Curtir </span> •
+                                <span class="cmt-fb-time"> 31 min </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim Resposta -->
+                    <!-- Resposta -->
+                    <div class="cmt-resposta">
+                        <div class="cmt-img">
+                            <img src="img/comments-facebook/21.jpg" class="cmt-fb-img">
+                        </div>
+                        <div class="cmt-fb">
+                            <div class="cmt-fb-name">
+                                Stefanny disse
+                            </div>
+                            <div class="cmt-fb-comment">
+                                Eu fiz td q ele ensina desde que comprei e foi direitinho que nem ele fala no livro. quem me ligo foi meu ex e n eu.
+                            </div>
+                            <div class="cmt-fb-status">
+                                <span class="cmt-fb-numlike"> Curtir </span> •
+                                <span class="cmt-fb-time"> 46 min </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim Resposta -->
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <!-- Footer -->
+        <div class="row fb-footer">
+            <div class="col">
+                <hr>
+                <img src="img/facebook-icon.png"> Facebook social plugin
+            </div>
+        </div>
+    </div>
+</section>    </main>
+
+    <footer>
+    <div class="container ct-footer">
+        <div class="row justify-content-center">
+            <div class="col-md-4 text-center">
+                <div class="logo-footer">
+                    <img src="img/logo.svg">
+                </div>
+                <p>
+                    Segredos da Reconquista - <span id="year"></span> <br>
+                    Todos os direitos reservados
+                </p>
+                <a title="Políticas de Privacidade" data-toggle="modal" data-target="#modalPoliticas">Políticas de Privacidade</a> -  <a title="Termos de Uso" data-toggle="modal" data-target="#modalTermos">Termos de Uso</a>
+            </div>
+        </div>
+    </div>
+    <div class="disclaimer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook. Depois que você sair do Facebook, a responsabilidade não é deles e sim do nosso site. Fazemos todos os esforços para indicar claramente e mostrar todas as provas do produto e usamos resultados reais. Nós não vendemos o seu e-mail ou qualquer informação para terceiros. Jamais fazemos nenhum tipo de spam. Se você tiver alguma dúvida, sinta-se à vontade para usar o link de contato e falar conosco em horário comercial de Segunda a Sextas das 09h00 ás 18h00. Lemos e respondemos todas as mensagens por ordem de chegada.
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+    <!-- JavaScript -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <script>
+        /* Elementos com Delay */
+                    setTimeout(function() {
+                $(".delay").show();
+            }, 1267 * 1000);
+            </script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.dsb-btn').prop('disabled', true);
+            $(".mask-cel-ddd").mask("(00) 00000-0000");
+        });
+    </script>
+
+
+    <!-- Modal Formulario -->
+    <div class="modal fade" id="modalFormulario" tabindex="-1" role="dialog" aria-labelledby="modalFormulario" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content" style="color: #333;font-size: 1.2em;text-align: center;">
+                <div class="modal-body" style="padding: 40px;">
+                    <h5 class="modal-title" id="modalFormulario" style="color:#333">Crie seu acesso agora</h5>
+                    <p style="font-size: 13px;">
+                        Informe o seu nome e email de acesso ao curso:
+                    </p>
+                    <p>
+                    <form accept-charset="UTF-8" action="https://em312.infusionsoft.com/app/form/process/5a215e4a45662818ea7407377090e2ed" class="infusion-form" id="inf_form_5a215e4a45662818ea7407377090e2ed" method="POST">
+
+                        <input type="hidden" name="inf_form_xid" value="5a215e4a45662818ea7407377090e2ed" />
+                        <input type="hidden" name="inf_form_name" value="&#091;SDR&#093; Formulario Checkout" />
+                        <input type="hidden" name="infusionsoft_version" value="1.70.0.262866" />
+                        <input type="hidden" name="redirect_url" value="https://em312.infusionsoft.com/app/form/process/5a215e4a45662818ea7407377090e2ed" />
+                        <input type="hidden" name="email_field" value="inf_field_Email" />
+
+                                                    <input type="hidden" name="inf_custom_boleto" value="sim" />
+                        
+                        <div class="infusion-field">
+                            <input class="infusion-field-input" id="inf_field_FirstName" name="inf_field_FirstName" placeholder="Seu nome completo" type="text" style="width: 100%; padding: 8px; border-radius: 7px; border: solid 1px #dadada; margin: 10px 0px; background-color: #f9f9f9; text-align: center; color: #666;" required />
+                        </div>
+                        <div class="infusion-field">
+                            <input class="infusion-field-input" id="inf_field_Email" name="inf_field_Email" placeholder="Seu email" type="email" style="width: 100%; padding: 8px; border-radius: 7px; border: solid 1px #dadada; margin: 10px 0px; background-color: #f9f9f9; text-align: center; color: #666;" required />
+                        </div>
+                        <div class="infusion-field">
+                            <input class="infusion-field-input mask-cel-ddd" maxlength="15" id="inf_field_Phone1" name="inf_field_Phone1" placeholder="DDD + Telefone" type="tel" style="width: 100%; padding: 8px; border-radius: 7px; border: solid 1px #dadada; margin: 10px 0px; background-color: #f9f9f9; text-align: center; color: #666;" required />
+                        </div>
+                        <div>
+                            <div>&nbsp;</div>
+                        </div>
+                        <div class="infusion-submit">
+                            <button style="color: white;" type="submit">Continuar</button>
+                        </div>
+                    </form>
+
+                    <script type="text/javascript" src="https://em312.infusionsoft.app/app/webTracking/getTrackingCode"></script>
+                    <script type="text/javascript" src="https://em312.infusionsoft.com/app/timezone/timezoneInputJs?xid=d10de4f3b8cfd94a6bb5135101399bf8"></script>
+                    </p>
+                </div>
+                <!--<div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Continuar</button>
+                </div>-->
+            </div>
+        </div>
+    </div>
+    <!-- /Modal Formulário -->
+
+
+    <!-- Modal Políticas de Privacidade -->
+    <div class="modal fade" id="modalPoliticas" tabindex="-1" role="dialog" aria-labelledby="modalPoliticas" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Políticas de Privacidade</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row justiy-content-center">
+                            <div class="col-12">
+                                <h3>Seu perfil pessoal</h3>
+                            </div>
+                            <div class="col">
+                                <p>
+                                    ​Quando pedimos informações sobre você, o nosso principal interesse é oferecer serviços mais personalizados. Nós respeitamos a sua privacidade e não a vendemos, nem alugamos, tampouco compartilhamos seu nome e informações pessoais com outras organizações.
+                                </p>
+                                <p>
+                                    ​Ao fornecer suas informações pessoais e foto, você compreende e consente à equipe deste site o uso da sua imagem, foto, vídeo e comentários. Essas informações estão disponíveis em seu perfil público e em nossa comunidade, onde você também verá as dos outros membros. Você tem a opção de negar o uso das suas informações ao atualizar suas escolhas em “Privacidade” – “Configurações de Conta”. De tempos em tempos, nós poderemos usar algumas informações de clientes em nossos materiais de marketing. Todavia, nunca faremos isso sem antes entrar em contato com você e receber um consentimento por escrito.
+                                </p>
+                            </div>
+                            <div class="col-12">
+                                <h3>Medidas de segurança</h3>
+                            </div>
+                            <div class="col">
+                                <p>​
+                                    A segurança de seus dados pessoais é importante para nós. Seguimos os padrões aceitos no ramo para proteger as suas informações pessoais que nos são enviadas tanto durante a transmissão de dados quanto após o recebimento deles. Quando você digita informações sigilosas (como seu cartão de crédito) em nossos formulários, elas são criptografadas para a transmissão, usando a tecnologia SSL (camada de sockets protegida).
+                                </p>
+                                <p>
+                                    Se você descobrir uma cobrança fraudulenta em sua fatura, feita em nome da equipe deste site, por favor, contate-nos e reporte o caso imediatamente para a administradora do cartão de acordo com os procedimentos padrões deles. O site faz uso de fóruns, murais e salas de bate-papo. Por favor, lembre-se de que qualquer informação que você expuser por esses meios se torna pública. Sempre tenha cautela com as informações pessoais que você fornece a qualquer pessoa nesses contextos.
+                                </p>
+                                <p>
+                                    Também insistimos na verificação da senha ao fazer login, para que você e seus dados estejam protegidos contra acessos sem autorização. Se você parar de usar o computador por muito tempo sem encerrar a sua sessão na escola, ela será encerrada automaticamente após certo tempo.
+                                </p>
+                                <p>​
+                                    Apenas funcionários que precisem da informação para realizar certas tarefas (como cobrança ou atendimento ao aluno, por exemplo) têm acesso a informações pessoais. Os servidores nos quais armazenamos suas informações são mantidos em ambiente seguro.
+                                </p>
+                                <p>
+                                    Apesar das práticas e procedimentos de segurança, como acontece com toda e qualquer rede de computadores na internet, a equipe deste site não pode garantir a segurança de seus dados pessoais ou de quaisquer outros dados passados pela internet e, portanto, não poderá ser responsabilizada por falhas de segurança.
+                                </p>
+                                <p>
+                                    Nenhum método de transmissão de dados ou armazenamento eletrônico na internet é 100% seguro. Deste modo, não podemos garantir a segurança total de seus dados.
+                            </div>
+                            <div class="col-12">
+                                <h3>Comunicados do site</h3>
+                            </div>
+                            <div class="col">
+                                <p>​
+                                    Para enviar a você as lições diárias (E-mail), precisamos de seu endereço de e-mail. Como assinante delas, você será adicionado em nossa lista para envio de e-mails eventuais com atualizações de serviços, ofertas especiais e promoções deste site.
+                                </p>
+                                <p>​
+                                    Você pode cancelar a sua inscrição ao receber os e-mails a qualquer momento. Basta clicar no link “Remover e-mail da lista” que aparece no rodapé do e-mail que enviamos. Enviaremos anúncios relacionados a serviços raramente, apenas quando for necessário.
+                                </p>
+                                <p>
+                                    Por exemplo, se o nosso serviço for temporariamente suspenso para manutenção, é possível que enviemos um e-mail para avisá-lo. Em geral, não é possível optar por não receber este último tipo de comunicação por não serem e-mails promocionais. Se você não quer receber os e-mails de aviso, você pode solicitar o descadastramento.
+                                </p>
+                                <p>
+                                    Proteção de informação de menores Estamos comprometidos a proteger a privacidade dos menores. Esse e todos nossos sites são voltados ao público em geral e não são feitos para atrair crianças com menos de 13 anos.
+                                </p>
+                                <p>
+                                    Não coletamos, nem solicitamos informações pessoais de menores de 13 anos, tampouco enviamos e-mails solicitando dados pessoais, a menos que tenhamos a permissão dos pais ou guardiões legais da criança. Inscrição e cadastro para assinatura deste site oferece cursos e produtos voltados para a área de saúde e bem estar.
+                                </p>
+                                <p>​
+                                    Para fazer um desses cursos, aproveitar o período grátis ou tornar-se usuário de nossa comunidade, você precisa se tornar membro deste site. Durante a inscrição, coletamos informações como seu nome e e- mail.
+                                </p>
+                                <p>​
+                                    Também pedimos dados demográficos, como idade e sexo, para criarmos seu perfil. Você também pode ter de fornecer seu cartão de crédito, caso o serviço que pediu seja pago. Essa informação é criptografada em nosso servidor seguro.
+                                </p>
+                                <p>
+                                    Como membro, você será adicionado à nossa base para receber e- mails eventuais com informações de serviços, ofertas especiais e promoções.
+                                    ​</p>
+                            </div>
+                            <div class="col-12">
+                                <h3>Web Beacons</h3>
+                            </div>
+                            <div class="col">
+                                <p>
+                                    Usamos uma tecnologia chamada clear gifs (também conhecida como web beacons ou web bugs), que ajuda a gerenciar melhor o conteúdo do site, informando qual funciona melhor. Os clear gifs são pequenos gráficos com um identificador único e têm função similar aos cookies – são usados para rastrear os movimentos online de usuários da internet. Porém, ao contrário dos cookies, que ficam no computador do usuário, os clear gifs são incorporados na própria página e são do tamanho de um ponto. Não utilizamos os clear gifs que contêm informações pessoais de nossos clientes. Usamos clear gifs em nossos e-mails com formato HTML para sabermos quais são abertos pelos destinatários. Assim, podemos medir a eficácia de certas comunicações e de nossas campanhas. Em alguns e-mails, colocamos conteúdo com links para clicar e ser redirecionado para o site do Chave do Coração do Homem. Quando os alunos e/ou clientes clicam em um desses links, passam por um servidor à parte antes de chegar à página de destino. Rastreamos os dados de cliques para determinar o interesse por cada assunto e medirmos a eficiência de nossas comunicações com o aluno. Caso prefira não ser rastreado assim, não clique em links de texto ou imagens em seus e-mails.
+                                </p>
+                            </div>
+                            <div class="col-12">
+                                <h3>Com quem compartilhamos suas informações</h3>
+                            </div>
+                            <div class="col">
+                                <p>
+                                    Compartilhamos seus dados pessoais com Segredos da Reconquista, para que as outras empresas do grupo possam oferecer produtos e serviços a você. Como As únicas informações que compartilhamos com a Segredos da Reconquista são seu nome, faixa etária, e-mail e país. Se não quiser que elas sejam compartilhadas, entre em contato com nosso atendimento pelo e-mail leonardo@segredosdareconquista.com.
+                                </p>
+                                <p>
+                                    Podemos fornecer seus dados a empresas que prestem serviços e que nos ajudem em nossas atividades, como o processamento de pagamentos ou a oferta de atendimento. Essas empresas estão autorizadas a usar seus dados apenas se necessário para prestação de serviços a nós. Também podemos passar seus dados:
+                                </p>
+                                <p>
+                                    - conforme exigido por lei para atender a intimações ou processos legais similares;
+                                </p>
+                                <p>​
+                                    - quando acreditarmos, de boa fé, que a quebra de sigilo é necessária para protegermos nossos direitos, proteger sua segurança ou a segurança de outros, investigar fraudes ou atender a um pedido do governo;
+                                </p>
+                                <p>
+                                    - caso a empresa se envolva numa fusão, aquisição, ou seja vendida em termos ou ao todo, você será notificado por e-mail, ou por um aviso bem claro em nosso site, de qualquer mudança nesse sentido, ou no uso de suas informações pessoais, bem como de qualquer nova situação que envolva os seus dados pessoais sendo divulgados a terceiros, a fim de que isso nunca seja feito sem consentimento.
+                                </p>
+                            </div>
+                            <div class="col-12">
+                                <h3>Cookies</h3>
+                            </div>
+                            <div class="col">
+                                <p>
+                                    ​​“Cookies” são pequenas informações que gravamos no browser que você utiliza para navegar ou no hard drive. Nós e nossos parceiros usamos os cookies para nos lembrarmos de informações pessoais quando você visita nosso site. Por exemplo, caso opte por visualizar nosso site em francês, armazenaremos essa informação nos cookies para que mostremos o site sempre em francês para você. Também usamos os cookies para gravar seu login, a fim de facilitar seu acesso ao site. A maioria dos browsers permite que você opte por não permitir que cookies sejam armazenados em seu computador. Usamos cookies para a sessão e cookies persistentes. O cookie de sessão expira assim que você fecha o browser. O cookie persistente continua em seu computador por um período maior. Além disso, usamos um prestador de serviços para rastrear o comportamento de visitantes em nosso site. Contudo, não temos acesso a seus cookies, tampouco os controlamos. As informações coletadas pela empresa prestadora de serviços são anônimas e usadas para melhorar nossos serviços e campanhas de marketing. Como acontece na maioria dos sites, recolhemos informações automaticamente e as salvamos em arquivos. Nessas informações, estão inclusos o endereço de IP, tipo de browser e idioma, provedor de serviço, páginas de referência, sistema operacional, data/hora e informações de cliques no site. Usamos essas informações para entender e analisar tendências, administrar o site, aprender sobre o comportamento dos usuários e reunir informações demográficas sobre nossa base de usuários como um todo.
+                                </p>
+                            </div>
+                            <div class="col-12">
+                                <h3>Quizzes and Contests</h3>
+                            </div>
+                            <div class="col">
+                                <p>
+                                    Podemos dar a oportunidade aos alunos e visitantes de participarem de quizzes (testes) ou concursos em nosso site. Caso você participe, pediremos informações e dados pessoais. A participação em quizzes e concursos é completamente voluntária e, portanto, você tem a opção de não fornecer suas informações. As informações pedidas costumam incluir informações de contato (como nome e e-mail) e dados demográficos (como CEP). Usamos essas informações para personalizar os comunicados enviados a você e sugerir produtos e serviços mais relevantes.
+                                </p>
+                            </div>
+                            <div class="col-12">
+                                <h3>Fóruns públicos</h3>
+                            </div>
+                            <div class="col">
+                                <p>
+                                    ​Nossos sites oferecem blogs, fóruns e comunidades acessíveis ao público em geral. Esteja ciente de que qualquer dado fornecido por você nessas áreas do site pode ser lido, coletado e usado por outros que as acessem. Para pedir que uma informação pessoal seja retirada de um blog, fórum ou comunidade, entre em contato com a escola através do email leonardo@segredosdareconquista.com Em alguns casos, talvez não seja possível remover a informação. Se for o caso, nós avisaremos você e explicaremos o motivo.
+                                </p>
+                            </div>
+                            <div class="col-12">
+                                <h3>Links para outros websites</h3>
+                            </div>
+                            <div class="col">
+                                <p>​​
+                                    ​Este site contém links para outros sites. Por favor, esteja ciente de que Segredos da Reconquista não é responsável pelos sistemas de privacidade de outros sites. Nós incentivamos nossos usuários a serem cautelosos ao saírem do nosso site e recomendamos que leiam os termos de uso de qualquer website que colete informação pessoal identificável. Estas políticas de privacidade se aplicam apenas para informações recebidas pelo website do Segredos da Reconquista.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer text-center">
+                    <button type="button" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Termos de Uso -->
+    <div class="modal fade" id="modalTermos" tabindex="-1" role="dialog" aria-labelledby="modalTermos" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Termos de Uso</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row justiy-content-center">
+                            <div class="col">
+                                <p>
+                                    A equipe do Segredos da Reconquista site criou essa Termo de uso a fim de demonstrar o nosso firme comprometimento sobre como você pode utilizar todas as informações deste Site.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row justiy-content-center">
+                            <div class="col-12">
+                                <h3>Termos de Uso</h3>
+                            </div>
+                            <div class="col">
+                                <p>
+                                    O acesso a este site representa a aceitação expressa e irrestrita dos termos de uso abaixo descritos. Se você não concorda com os termos, por favor, não acesse nem utilize este website.
+                                </p>
+                                <p>
+                                    O visitante poderá usar este site apenas para finalidades lícitas. Este espaço não poderá ser utilizado para para publicar, enviar, distribuir ou divulgar conteúdos ou informação de caráter difamatório, obsceno ou ilícito, inclusive informações de propriedade exclusiva pertencentes a outras pessoas ou empresas, bem como marcas registradas ou informações protegidas por direitos autorais, sem a expressa autorização do detentor desses direitos. Ainda, o visitante não poderá usar este site para obter ou divulgar informações pessoais, inclusive endereços na Internet, sobre os usuários do site.
+                                </p>
+                                <p>
+                                    A equipe deste site empenha-se em manter a qualidade, atualidade e autenticidade das informações do site, mas seus criadores e colaboradores não se responsabilizam por eventuais falhas nos serviços ou inexatidão das informações oferecidas.
+                                </p>
+                                <p>
+                                    O usuário não deve ter como pressuposto que tais serviços e informações são isentos de erros ou serão adequados aos seus objetivos particulares. Os criadores e colaboradores tampouco assumem o compromisso de atualizar as informações, e reservam-se o direito de alterar as condições de uso ou preços dos serviços e produtos oferecidos no site a qualquer momento.
+                                </p>
+                                <p>
+                                    O acesso a este site é gratuito. Este site poderá criar áreas de acesso exclusivo aos seus clientes ou para terceiros especialmente autorizados.
+                                </p>
+                                <p>
+                                    Os criadores e colaboradores deste site poderão a seu exclusivo critério e em qualquer tempo, modificar ou desativar o site, bem como limitar, cancelar ou suspender seu uso ou o acesso. Também estes Termos de Uso poderão ser alterados a qualquer tempo. Visite regularmente esta página e consulte os Termos então vigentes. Algumas disposições destes Termos podem ser substituídas por termos ou avisos legais expressos localizados em determinadas páginas deste site.
+                                </p>
+                            </div>
+                            <div class="col-12">
+                                <h3>Informações enviadas pelos usuários e colaboradores</h3>
+                            </div>
+                            <div class="col">
+                                <p>
+                                    Qualquer material, informação, artigos ou outras comunicações que forem transmitidas, enviadas ou publicadas neste site serão considerados informação não confidencial, e qualquer violação aos direitos dos seus criadores não será de responsabilidade da equipe deste site. É terminantemente proibido transmitir, trocar ou publicar, através deste website, qualquer material de cunho obsceno, difamatório ou ilegal, bem como textos ou criações de terceiros sem a autorização do autor. A equipe deste site reserva-se o direito de restringir o acesso às informações enviadas por terceiros aos seus usuários.
+                                </p>
+                                <p>
+                                    Este site poderá, mas não é obrigado, a monitorar, revistar e restringir o acesso a qualquer área no site onde usuários transmitem e trocam informações entre si, incluindo, mas não limitado a, salas de chat, centro de mensagens ou outros fóruns de debates, podendo retirar do ar ou retirar o acesso a qualquer destas informações ou comunicações. Porém, a equipe deste site não é responsável pelo conteúdo de qualquer uma das informações trocadas entre os usuários, sejam elas lícitas ou ilícitas.
+                                </p>
+                            </div>
+                            <div class="col-12">
+                                <h3>Limitação da Responsabilidade</h3>
+                            </div>
+                            <div class="col">
+                                <p>
+                                    ​​​Os materiais são fornecidos neste website sem nenhuma garantia explícita ou implícita de comercialização ou adequação a qualquer objetivo específico. Em nenhum caso este site ou os seus colaboradores serão responsabilizados por quaisquer danos, incluindo lucros cessantes, interrupção de negócio, ou perda de informação que resultem do uso ou da incapacidade de usar os materiais. A equipe deste site não garante a precisão ou integridade das informações, textos, gráficos, links e outros itens dos materiais.
+                                </p>
+                                <p>
+                                    A equipe deste site não é responsável pela violação de direitos autorais decorrente de informações, documentos e materiais publicados neste website, comprometendo-se a retirá-los do ar assim que notificado da infração.
+                                </p>
+                            </div>
+                            <div class="col-12">
+                                <h3>​Erros e falhas</h3>
+                            </div>
+                            <div class="col">
+                                <p>
+                                    Os documentos, informações, imagens e gráficos publicados neste site podem conter imprecisões técnicas ou erros tipográficos. Em nenhuma hipótese a equipe deste site e/ou seus respectivos fornecedores serão responsáveis por qualquer dano direto ou indireto decorrente da impossibilidade de uso, perda de dados ou lucros, resultante do acesso e desempenho do site, dos serviços oferecidos ou de informações disponíveis neste site. O acesso aos serviços, materiais, informações e facilidades contidas neste website não garante a sua qualidade.
+                                </p>
+                            </div>
+                            <div class="col-12">
+                                <h3>Links para sites de terceiros</h3>
+                            </div>
+                            <div class="col">
+                                <p>
+                                    Os sites apontados não estão sob o controle deste site que não é responsável pelo conteúdo de qualquer outro website indicado ou acessado por meio deste site reserva-se o direito de eliminar qualquer link ou direcionamento a outros sites ou serviços a qualquer momento. Este site não endossa firmas ou produtos indicados, acessados ou divulgados através deste website, tampouco pelos anúncios aqui publicados, reservando-se o direito de publicar este alerta em suas páginas eletrônicas sempre que considerar necessário.
+                                </p>
+                            </div>
+                            <div class="col-12">
+                                <h3>Direitos autorais e propriedade intelectual</h3>
+                            </div>
+                            <div class="col">
+                                <p>
+                                    Os documentos, conteúdos e criações contidos neste website pertencem aos seus criadores e colaboradores. A autoria dos conteúdo, material e imagens exibidos no diabetescontrolada.com.br é protegida por leis nacionais e internacionais. Não podem ser copiados, reproduzidos, modificados, publicados, atualizados, postados, transmitidos ou distribuídos de qualquer maneira sem autorização prévia e por escrito do proprietários desse site.
+                                </p>
+                                <p>​As imagens contidas neste website são aqui incorporadas apenas
+                                    para fins de visualização, e, salvo autorização expressa por escrito,
+                                    não podem ser gravadas ou baixadas via download. A reprodução ou
+                                    armazenamento de materiais recuperados a partir deste serviço
+                                    sujeitará os infratores às penas da lei.</p>
+                                <p>
+                                    As imagens contidas neste website são aqui incorporadas apenas para fins de visualização, e, salvo autorização expressa por escrito, não podem ser gravadas ou baixadas via download. A reprodução ou armazenamento de materiais recuperados a partir deste serviço sujeitará os infratores às penas da lei.
+                                    ​</p>
+                                <p>
+                                    O nome deste site, seu logotipo, o nome de domínio para acesso na Internet, bem como todos os elementos característicos da tecnologia desenvolvida e aqui apresentada, sob a forma da articulação de bases de dados, constituem marcas registradas e propriedades intelectuais privadas e todos os direitos decorrentes de seu registro são assegurados por lei. Alguns direitos de uso podem ser cedidos pelo proprietários do site, em contrato ou licença especial, que pode ser cancelada a qualquer momento se não cumpridos os seus termos.
+                                </p>
+                                <p>
+                                    As marcas registradas deste site só podem ser usadas publicamente com autorização expressa. O uso destas marcas registradas em publicidade e promoção de produtos deve ser adequadamente informado.
+                                </p>
+                            </div>
+                            <div class="col-12">
+                                <h3>Reclamações sobre violação de direitos autorais</h3>
+                            </div>
+                            <div class="col">
+                                <p>
+                                    ​A equipe deste site respeita a propriedade intelectual de outras pessoas ou empresas e solicitamos aos nossos membros que façam o mesmo. Toda e qualquer violação de direitos autorais deverá ser notificada ao leonardo@segredosdareconquista.com e acompanhada dos documentos e informações que confirmam a autoria.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer text-center">
+                    <button type="button" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    </body>
+
+    </html>
